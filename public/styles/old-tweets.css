@@ -15,7 +15,7 @@
 
 /* ^ - Keeps the hover-ing below affecting the required text only. */
 
-.old-tweet {
+article {
   border: var(--bord);
   justify-content: space-between;
   color: transparent;
@@ -24,7 +24,7 @@
   flex-wrap: wrap;
 }
 
-.old-tweet:hover {
+article:hover {
   filter: none;
   color: purple;
   box-shadow: 10px 10px 0px 0px;

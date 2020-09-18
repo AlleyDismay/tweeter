@@ -46,6 +46,7 @@ function renderTweet(tweet) {
 
   const htm = $(".old-tweet").html().replace("<img class=\"avatar\" alt=\"User's Avatar\" src=\"/images/profile-hex.png", `<img class=\"avatar\" alt=\"User's Avatar\" src=\"${tweet["user"]["avatars"]}`).replace("Display Name", tweet["user"]["name"]).replace("Handle", tweet["user"]["handle"]).replace("Text", tweet["content"]["text"]).replace("Post Time", tweet["created_at"]);
   // return $(".old-tweets").prepend("<article class=\"old-tweet\">"+htm+"</article>"));
+  // return $(".old-tweets").prepend(<article>+htm+</article>);
   return $(".old-tweets").prepend(htm);
 }
 
