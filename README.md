@@ -18,5 +18,5 @@ Using HTML, CSS, JS, jQuery and AJAX for the front-end, and their Node, Express 
 
 ## Tweeting and Not Tweeting
 
-!["Can Tweet"](https://github.com/lighthouse-labs/tweeter/blob/master/docs/Before.png)
-!["Cannot Tweet"](https://github.com/lighthouse-labs/tweeter/blob/master/docs/After.png)
+!["Can Tweet"](https://github.com/AlleyDismay/tweeter/blob/master/docs/Before.png)
+!["Cannot Tweet"](https://github.com/AlleyDismay/tweeter/blob/master/docs/After.png)
