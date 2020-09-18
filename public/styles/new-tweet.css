@@ -1,0 +1,40 @@
+/* Inheriting:
+
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    align-self: stretch;
+
+    --bord: 5px solid black; - The only border that seems to be needed.
+*/
+
+.new-tweet h2,
+.new-tweet label {
+  align-items: flex-start;
+  align-self: stretch;
+}
+
+.new-tweet form textarea{
+  background: transparent;
+  border: 0 none;
+  border-bottom: var(--bord);
+  resize: none;
+}
+
+.new-tweet form div {
+  font-family: 'Bungee', sans-serif;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+button {
+  background-color: #4056a1;
+  color: #FFFFFF;
+}
+
+button:disabled{
+  border: 1px solid #999999;
+  background-color: #cccccc;
+  color: #666666;
+}

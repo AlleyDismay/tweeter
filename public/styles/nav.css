@@ -1,0 +1,33 @@
+/* Inheriting:
+
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    align-self: stretch;
+
+    --bord: 5px solid black; - The only border that seems to be needed.
+*/
+
+/*Something that doesn't apply to this, but does apply to the old-tweets image, invalidates things. Blurring?*/
+
+nav {
+  height: 120px;
+  width: 95%;
+  background-color: #4056a1;
+  color: #ffffff;
+  padding: 1.5em;
+  position: fixed;
+  transition: all 3000s, transform 2000s;
+  transition-timing-function: linear;
+}
+
+nav span {
+  font-family: 'Bungee', sans-serif;
+  align-self: flex-start;
+}
+
+nav:hover {
+  transform: rotate(-500000deg);
+  background-color: #1a5e63;
+}

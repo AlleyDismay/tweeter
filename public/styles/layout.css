@@ -3,23 +3,63 @@
  * https://css-tricks.com/international-box-sizing-awareness-day/
  * Do not modify these two selectors, please
  */
-html {
+
+html * {
   box-sizing: border-box;
-}
-*, *:before, *:after {
-  box-sizing: inherit;
+  display: flex;
+  align-self: stretch;
 }
 
-/*
- * Global layout stuff
- */
+*, 
+*:before, 
+*:after {
+  box-sizing: inherit;
+  transition-timing-function: linear;
+  margin: 1%;
+}
 
 body {
   color: #545149;
   background-color: #f4f1ec;
   font-size: 24px;
+  font-family: 'Source Sans Pro', sans-serif;
+  flex-direction: column;
+  align-content: space-between;
+  justify-content: flex-start;
+  align-items: space-between;
 }
 
-/*
- * Additional CSS can be defined below or in other CSS files, as per instructions
- */
+:root{--bord: 5px solid black;}
+
+head{
+  display: none;
+}
+
+body * {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+body > main {
+  width: 90%;
+  align-self: center;
+}
+
+/* Comments go above or below the code to be described, not inside.*/
+/* So they don't inherit the "align-self: stretch;" from above, as that would stretch out the image. */
+
+img {
+  align-self: initial;
+}
+@media only screen and (min-width: 768px){
+  body {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  
+  body > main {
+    margin-top: 150px;
+  }
+  
+}

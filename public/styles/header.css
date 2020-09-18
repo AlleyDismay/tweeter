@@ -1,0 +1,17 @@
+/* Inheriting:
+
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    align-self: stretch;
+
+    --bord: 5px solid black; - The only border that seems to be needed.
+*/
+
+body > header {
+  margin-top: 150px;
+  height: 400px;
+  background-color: #7ddddd;
+  background-image: url(http://www.transparenttextures.com/patterns/60-lines.png);
+}

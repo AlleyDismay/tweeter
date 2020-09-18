@@ -1,0 +1,53 @@
+/* Inheriting:
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-self: stretch;
+
+    --bord: 5px solid black; - The only border that seems to be needed.
+*/
+
+.old-tweets * {
+  color: initial;
+}
+
+/* ^ - Keeps the hover-ing below affecting the required text only. */
+
+.old-tweet {
+  border: var(--bord);
+  justify-content: space-between;
+  color: transparent;
+  filter: blur(1px);
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.old-tweet:hover {
+  filter: none;
+  color: purple;
+  box-shadow: 10px 10px 0px 0px;
+}
+
+.old-tweets header {
+  display: inline-flex;
+  float: inline-start;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.post {
+  width: 100%;
+  flex-direction: column;
+  border: var(--bord);
+  word-wrap: break-word;
+}
+
+.old-tweets main {
+  align-self: flex-start;
+}
+
+.old-tweets footer {
+  border-top: var(--bord);
+}
