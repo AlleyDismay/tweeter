@@ -41,11 +41,11 @@ article:hover {
   width: 100%;
   flex-direction: column;
   border: var(--bord);
-  word-wrap: break-word;
 }
 
 .old-tweets main {
   align-self: flex-start;
+  word-wrap: break-word;
 }
 
 .old-tweets footer {

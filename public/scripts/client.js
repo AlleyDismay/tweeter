@@ -44,17 +44,19 @@ function loadTweets() {
 
 function renderTweet(tweet) {
 
-  const htm = $(".old-tweet").html().replace("<img class=\"avatar\" alt=\"User's Avatar\" src=\"/images/profile-hex.png", `<img class=\"avatar\" alt=\"User's Avatar\" src=\"${tweet["user"]["avatars"]}`).replace("Display Name", tweet["user"]["name"]).replace("Handle", tweet["user"]["handle"]).replace("Text", tweet["content"]["text"]).replace("Post Time", tweet["created_at"]);
-  // return $(".old-tweets").prepend("<article class=\"old-tweet\">"+htm+"</article>");
-  // return $(".old-tweets").prepend(<article>+htm+</article>);
-  // console.log(htm);
+  const htm = $(".old-tweet").html().replace("<img class=\"avatar\" alt=\"User's Avatar\" src=\"/images/profile-hex.png", `<img class=\"avatar\" alt=\"User's Avatar\" src=\"${tweet["user"]["avatars"]}`).replace("Display Name", tweet["user"]["name"]).replace("Handle", tweet["user"]["handle"]).replace("Text", escape(tweet["content"]["text"])).replace("Post Time", tweet["created_at"]);
   const ahtm = "<article>"+htm+"</article>";
-  // console.log("<article>"+htm+"</article>");
-  return $(".old-tweets").prepend(ahtm);
+  $(".old-tweets").prepend(ahtm);
 }
 
 function renderTweets(tweets) {
   for (tweet of tweets) {
     renderTweet(tweet);
   };
+}
+
+function escape(str) {
+  let div = document.createElement('div');
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML;
 }
