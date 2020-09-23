@@ -42,11 +42,26 @@ function loadTweets() {
 // This takes a Tweet object and returns the HTML to be presented.
 //
 
-function renderTweet(tweet) {
+function renderTweet({user, content, created_at}) {
 
-  const htm = $(".old-tweet").html().replace("<img class=\"avatar\" alt=\"User's Avatar\" src=\"/images/profile-hex.png", `<img class=\"avatar\" alt=\"User's Avatar\" src=\"${tweet["user"]["avatars"]}`).replace("Display Name", tweet["user"]["name"]).replace("Handle", tweet["user"]["handle"]).replace("Text", escape(tweet["content"]["text"])).replace("Post Time", tweet["created_at"]);
-  const ahtm = "<article>"+htm+"</article>";
-  $(".old-tweets").prepend(ahtm);
+  const htm = $(".old-tweet").html()
+    .replace("=\"/images/profile-hex.png",
+             `=\"${user["avatars"]}`)
+    .replace("Display Name", user["name"])
+    .replace("Handle", user["handle"])
+    .replace("Text", escape(content["text"]))
+    .replace("Post Time", created_at);
+    
+  const articleOldHtm = "<article class='old-tweet'>"+htm+"</article>";
+  console.log("old article", articleOldHtm);
+  
+  const articleNewHtm = articleOldHtm.replace("old", "new");
+  console.log("new article", articleNewHtm);
+
+  // const sectionHtm = "<section class='old-tweets'>"+articleOldHtm+"</section>"
+  // TODO: Investigate why console.logs change when prepend-ing different variables.
+
+  $(".old-tweets").prepend(articleNewHtm)
 }
 
 function renderTweets(tweets) {
