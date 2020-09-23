@@ -15,7 +15,7 @@
 
 /* ^ - Keeps the hover-ing below affecting the required text only. */
 
-article {
+.old-tweet {
   border: var(--bord);
   justify-content: space-between;
   color: transparent;
@@ -24,30 +24,30 @@ article {
   flex-wrap: wrap;
 }
 
-article:hover {
+.old-tweet:hover {
   filter: none;
   color: purple;
   box-shadow: 10px 10px 0px 0px;
 }
 
-.old-tweets header {
+.old-tweet header {
   display: inline-flex;
   float: inline-start;
   flex-direction: row;
   justify-content: flex-start;
 }
 
-.post {
+.old-tweet .post {
   width: 100%;
   flex-direction: column;
   border: var(--bord);
 }
 
-.old-tweets main {
+.old-tweet main {
   align-self: flex-start;
   word-wrap: break-word;
 }
 
-.old-tweets footer {
+.old-tweet footer {
   border-top: var(--bord);
 }
