@@ -44,7 +44,7 @@ function loadTweets() {
 
 function renderTweet({user, content, created_at}) {
 
-  const htm = $(".old-tweet").html()
+  const htm = $(".old-tweet:last").html()
   .replace("=\"/images/profile-hex.png",
            `=\"${user["avatars"]}`)
   .replace("Display Name", user["name"])
@@ -52,7 +52,7 @@ function renderTweet({user, content, created_at}) {
   .replace("Text", escape(content["text"]))
   .replace("Post Time", created_at);
   
-  const articleOldHtm = "<article>"+htm+"</article>";
+  const articleOldHtm = "<article class='old-tweet'>"+htm+"</article>";
 
   $(".old-tweets").prepend(articleOldHtm);
 }
