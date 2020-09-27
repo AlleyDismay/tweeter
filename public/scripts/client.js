@@ -17,9 +17,9 @@ $(document).ready(() => {
 // Note: Arrow functions don't have its own bindings to "this" or "super", and should not be used as methods.x
 
 function formSubmission() {
-  $("form").on('click', () => {
+  $("button").on('click', () => {
     event.preventDefault();
-    $.ajax({
+    $.ajax({  
       url: "tweets",
       method: "POST",
       data: $("form").serialize(),
